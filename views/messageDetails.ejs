@@ -1,0 +1,16 @@
+<html>
+
+<head>
+  <title>
+    <%= title%>
+  </title>
+</head>
+
+<body>
+  <a href="/">Back</a>
+  <ul>
+    <%- include('message', {text: message.text, user: message.user, added: message.added}); %>
+  </ul>
+</body>
+
+</html>

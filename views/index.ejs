@@ -1,0 +1,20 @@
+<html>
+
+<head>
+  <title>
+    <%= title%>
+  </title>
+</head>
+
+<body>
+  <a href="/new">New Message</a>
+  <ul>
+    <% messages.forEach((message, index)=> { %>
+      <a href="/new/<%= index %>">
+        <%- include('message', {text: message.text, user: message.user, added: message.added}); %>
+      </a>
+      <% }); %>
+  </ul>
+</body>
+
+</html>
