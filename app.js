@@ -1,8 +1,7 @@
 // app setup
 const express = require("express");
 const app = express();
-const PORT = 3000;
-const path = require("node:path");
+const PORT = process.env.PORT || 3000;
 
 // Routers
 const indexRouter = require("./routes/indexRouter");
@@ -13,7 +12,6 @@ app.listen(PORT, () => {
 });
 
 // Specify view engine
-app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 // Middleware

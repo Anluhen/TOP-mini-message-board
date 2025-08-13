@@ -7,14 +7,15 @@
 </head>
 
 <body>
+  <h1><%= title %></h1>
   <a href="/new">New Message</a>
-  <ul>
-    <% messages.forEach((message, index)=> { %>
-      <a href="/new/<%= index %>">
+  <div style="padding: 1rem;">
+    <% messages.map(message=> { %>
+      <a href="/new/<%= message.id %>">
         <%- include('message', {text: message.text, user: message.user, added: message.added}); %>
       </a>
       <% }); %>
-  </ul>
+    </div>
 </body>
 
 </html>
