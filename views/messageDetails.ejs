@@ -9,7 +9,7 @@
 <body>
   <h1><%= title %></h1>
   <div style="padding: 1rem;">
-    <%- include('message', {text: message.text, user: message.user, added: message.added}); %>
+    <%- include('message', {text: message.text, author: message.author, added: message.added}); %>
   </div>
   <a href="/">Back</a>
 </body>

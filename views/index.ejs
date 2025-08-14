@@ -12,7 +12,7 @@
   <div style="padding: 1rem;">
     <% messages.map(message=> { %>
       <a href="/new/<%= message.id %>">
-        <%- include('message', {text: message.text, user: message.user, added: message.added}); %>
+        <%- include('message', {text: message.text, author: message.author, added: message.added}); %>
       </a>
       <% }); %>
     </div>
